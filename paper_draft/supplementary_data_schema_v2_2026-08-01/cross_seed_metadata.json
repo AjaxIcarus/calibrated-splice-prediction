@@ -1,0 +1,91 @@
+{
+  "artifact_schema": "flank400_cross_seed_robustness_schema_v2",
+  "created_at_utc": "2026-08-01T06:21:13.814475+00:00",
+  "models": [
+    {
+      "model_role": "primary",
+      "model": "seed11_epoch11",
+      "seed": 11,
+      "epoch": 11,
+      "source_directory": "results/bootstrap_paired_flank400_seed11_epoch11_fullpopulation_validonly_v2_n200",
+      "source_sha256": {
+        "point_estimates.csv": "a35b673ba71b60e550ca288ca915740b1591854553b777006902c76f54649882",
+        "bootstrap_summary.csv": "90ceaada7fff0bb8d2232b6a5eca6a2421ced730c423bb18000c0ea53b53486b",
+        "paired_difference_summary.csv": "33417709fc802a60e97fe0f7fc9c86eeeaa123de49fb36de796c90c0b1a43b23",
+        "bootstrap_metadata.json": "c68c01a086c62956ec4b4f85959c687cd8adcc398e07bf5635c0c064c8442e41"
+      },
+      "cache_sha256": "31387e49d9f3de563ab6084c13db07b4915346265a22fbbe5d3b2830c7be4b1a"
+    },
+    {
+      "model_role": "replication",
+      "model": "seed23_epoch14",
+      "seed": 23,
+      "epoch": 14,
+      "source_directory": "results/paired_bootstrap_flank400_seed23_epoch14_fullpopulation_validonly_v2",
+      "source_sha256": {
+        "point_estimates.csv": "f2cb2e59ae9a514e9ebec8c4aa2f6f975bc4e5679d65f7464e12e33e6f7043cc",
+        "bootstrap_summary.csv": "c3e4ee5a46f5d3611e06f7b41864e391471296d49af5740dcaa7d71bf8197f4a",
+        "paired_difference_summary.csv": "19d9f329cbea7dc25602ca474ea7d28fc67bdaf9a52139b6cbc7949207835d16",
+        "bootstrap_metadata.json": "c04008ae2807eb97d908a8ff21e8bba5e24ca5bfbee256e2ba6f7671710b6b58"
+      },
+      "cache_sha256": "7acf7e9e98a534c5c368b39a5ffca95bdd73004f098459fc51b88cf72f677e5e"
+    }
+  ],
+  "population": {
+    "cache_schema_version": 2,
+    "all_sequences_included": true,
+    "padding_excluded_from_sampling": true,
+    "total_sequences_seen": 84258,
+    "total_positions_seen": 421290000,
+    "valid_positions_seen": 407278622,
+    "padding_positions_seen": 14011378,
+    "positive_positions_seen": 107988,
+    "valid_nonsplice_positions_seen": 407170634,
+    "sampled_negatives": 500000,
+    "cache_random_seed": 11
+  },
+  "analysis": {
+    "n_bootstrap": 200,
+    "bootstrap_seed": 17,
+    "bootstrap_unit": "position",
+    "resampling": "stratified_by_true_class",
+    "paired_across_methods": true,
+    "n_bins": 15,
+    "global_temperature": 1.1,
+    "method_order": [
+      "uncalibrated",
+      "global_T_1.1",
+      "true_logit_unweighted_vector_T",
+      "true_logit_target_weighted_vector_T",
+      "openspliceai_style_full_validation_vector_T_v2"
+    ]
+  },
+  "core_metrics": [
+    "weighted_multiclass_ece",
+    "weighted_multiclass_nll",
+    "weighted_multiclass_brier",
+    "target_weighted_acceptor_auprc",
+    "target_weighted_donor_auprc"
+  ],
+  "metric_directions": {
+    "weighted_multiclass_ece": "lower_is_better",
+    "weighted_multiclass_nll": "lower_is_better",
+    "weighted_multiclass_brier": "lower_is_better",
+    "target_weighted_acceptor_auprc": "higher_is_better",
+    "target_weighted_donor_auprc": "higher_is_better"
+  },
+  "outputs_sha256": {
+    "cross_seed_change_vs_uncalibrated.csv": "73cee1009db1344fe79dc33096310b1cd29c35968e7b7545a1eeab9bd131df92",
+    "cross_seed_compact_table.md": "8d5d148900842271c26d712c719160708ff47b01a33058fd5d13412523796c82",
+    "cross_seed_core_point_estimates.csv": "6e8c8f7564e7e7cbe9b836c93776a3463fd984743774f995ef082845bfba7505",
+    "cross_seed_descriptive_summary.csv": "e3a6e2e31f23ff0576ed6700050f978b165075f3e205839416708d0cf3b8a6aa",
+    "cross_seed_point_estimates_all_metrics.csv": "9929abee53166ae079cfd55e893d4460ac84366d370cf83af949c59e957ec7aa",
+    "cross_seed_prior_aware_paired_comparison.csv": "0779585d79b0804ca063f8c568387d04453eb4b7987e8fbe7dcfa856adf83ceb",
+    "cross_seed_robustness_summary.md": "4716fc5e3ce82ea3484412f84a2565730b805e5549c1f83fd377690e2d7a18e3"
+  },
+  "interpretation_limits": [
+    "Two seeds provide descriptive model-level robustness only.",
+    "Position-level bootstrap intervals do not estimate training-seed variability.",
+    "Target-weighted schema-v2 AUPRC is not interchangeable with legacy sample-based AUPRC."
+  ]
+}

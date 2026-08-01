@@ -1,0 +1,7 @@
+PASS: flank-400 chromosome-transfer milestone frozen
+date=2026-07-24
+primary=seed11_epoch11
+replication=seed23_epoch14
+positions_per_model=416140000
+manifest=results/flank400_chromosome_transfer_milestone_2026-07-24_manifest.csv
+manifest_sha256=a6c01ed9d08689b036e51a9af9b4ebd852d816af87236b48d3be6d0d9bb3c0cb

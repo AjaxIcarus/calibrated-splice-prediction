@@ -1,0 +1,14 @@
+epoch,validation_loss,checkpoint
+1,0.00030796631472185254,results/best_models/flank400_focal_epoch1_best.pt
+2,0.00016365540795959532,results/best_models/flank400_focal_epoch2_best.pt
+3,0.00013866196968592703,results/best_models/flank400_focal_epoch3_best.pt
+4,0.0001123044712585397,results/best_models/flank400_focal_epoch4_best.pt
+5,9.56298754317686e-05,results/best_models/flank400_focal_epoch5_best.pt
+6,8.604489994468167e-05,results/best_models/flank400_focal_epoch6_best.pt
+7,8.218998118536547e-05,results/best_models/flank400_focal_epoch7_best.pt
+8,7.983633986441419e-05,results/best_models/flank400_focal_epoch8_best.pt
+9,8.110864291666076e-05,results/best_models/flank400_focal_epoch9_best.pt
+10,7.5645322795026e-05,results/best_models/flank400_focal_epoch10_best.pt
+11,7.27636506780982e-05,results/best_models/flank400_focal_epoch11_best.pt
+12,7.42063857614994e-05,results/best_models/flank400_focal_epoch12_best.pt
+13,7.58925307309255e-05,results/best_models/flank400_focal_epoch13_best.pt

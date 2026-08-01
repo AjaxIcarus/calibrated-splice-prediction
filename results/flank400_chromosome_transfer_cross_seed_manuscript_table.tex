@@ -1,0 +1,15 @@
+\begin{table}
+\caption{Five-chromosome calibration transfer in the primary seed-11/epoch-11 model and independent seed-23/epoch-14 replication. Each model was evaluated over 416,140,000 positions. Lower is better.}
+\label{tab:flank400_chromosome_transfer_cross_seed}
+\begin{tabular}{lrrrr}
+\toprule
+Method & Primary ECE & Replication ECE & Primary NLL & Replication NLL \\
+\midrule
+Uncalibrated & $1.507\times 10^{-3}$ & $1.545\times 10^{-3}$ & $1.698\times 10^{-3}$ & $1.726\times 10^{-3}$ \\
+Global T=1.1 & $2.519\times 10^{-3}$ & $2.587\times 10^{-3}$ & $2.717\times 10^{-3}$ & $2.775\times 10^{-3}$ \\
+Unweighted vector-T & $4.692\times 10^{-5}$ & $5.049\times 10^{-5}$ & $2.062\times 10^{-3}$ & $1.975\times 10^{-3}$ \\
+Genome-weighted vector-T & $2.087\times 10^{-5}$ & $2.739\times 10^{-5}$ & $2.522\times 10^{-4}$ & $2.404\times 10^{-4}$ \\
+OpenSpliceAI-style vector-T & \textbf{$4.554\times 10^{-6}$} & \textbf{$3.085\times 10^{-6}$} & \textbf{$2.442\times 10^{-4}$} & \textbf{$2.305\times 10^{-4}$} \\
+\bottomrule
+\end{tabular}
+\end{table}

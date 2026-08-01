@@ -1,0 +1,96 @@
+{
+  "all_sequences_included": true,
+  "analysis": {
+    "bootstrap_seed": 17,
+    "bootstrap_unit": "position",
+    "ece_bins": "[lo, hi), final bin includes 1.0",
+    "global_temperature": 1.1,
+    "limitation": "Position-level bootstrap; the cache has no sequence/gene identifier, so within-sequence biological dependence is not represented.",
+    "method_order": [
+      "uncalibrated",
+      "global_T_1.1",
+      "true_logit_unweighted_vector_T",
+      "true_logit_target_weighted_vector_T",
+      "openspliceai_style_full_validation_vector_T_v2"
+    ],
+    "metric_direction": {
+      "acceptor_brier": "lower_is_better",
+      "acceptor_ece": "lower_is_better",
+      "acceptor_nll": "lower_is_better",
+      "donor_brier": "lower_is_better",
+      "donor_ece": "lower_is_better",
+      "donor_nll": "lower_is_better",
+      "sampled_acceptor_auprc": "higher_is_better",
+      "sampled_donor_auprc": "higher_is_better",
+      "target_weighted_acceptor_auprc": "higher_is_better",
+      "target_weighted_donor_auprc": "higher_is_better",
+      "weighted_multiclass_brier": "lower_is_better",
+      "weighted_multiclass_ece": "lower_is_better",
+      "weighted_multiclass_nll": "lower_is_better"
+    },
+    "n_bins": 15,
+    "n_bootstrap": 200,
+    "paired_across_methods": true,
+    "resampling": "stratified_by_true_class",
+    "script": "/home/unix_s/projects/calibrated-splice-prediction/scripts/bootstrap_logit_metrics_paired_v2.py",
+    "script_sha256": "67c4a7184c4af55250cec81b0c3dd3cf7d5218ebed12434d81c6dc93b0ed99f9"
+  },
+  "cache_path": "results/logit_cache_flank400_seed11_epoch11_fullpopulation_validonly_v2/test_sampled_logits.npz",
+  "cache_random_seed": 11,
+  "cache_schema_version": 2,
+  "cache_sha256": "31387e49d9f3de563ab6084c13db07b4915346265a22fbbe5d3b2830c7be4b1a",
+  "negatives_seen_total": 407170634,
+  "outputs": [
+    "point_estimates.csv",
+    "bootstrap_replicates.csv",
+    "bootstrap_summary.csv",
+    "paired_difference_replicates.csv",
+    "paired_difference_summary.csv",
+    "bootstrap_metadata.json",
+    "bootstrap_summary.md"
+  ],
+  "padding_excluded_from_sampling": true,
+  "padding_positions_seen": 14011378,
+  "positive_positions_seen": 107988,
+  "sample_class_counts": [
+    500000,
+    53994,
+    53994
+  ],
+  "sample_size": 607988,
+  "sampled_negatives": 500000,
+  "temperature_inputs": {
+    "openspliceai_style": {
+      "path": "results/openspliceai_style_vectorT_flank400_seed11_epoch11_fullval_validonly_v2/temperature_best.txt",
+      "sha256": "0174cedf727621c8565a3fc69fb7b687c301f258228162ac8c1478480e2da8c7",
+      "value": [
+        0.3990596831,
+        0.3892563283,
+        0.392121762
+      ]
+    },
+    "target_weighted": {
+      "path": "results/logit_calibration_flank400_seed11_epoch11_fullpopulation_validonly_v2_steps6000/temperature_target_weighted_best.txt",
+      "sha256": "6016ded413370e57a203e272556b80c2ce5d5c0462c86caf268f4ada422e2953",
+      "value": [
+        0.3870403469,
+        0.3793514073,
+        0.3680961728
+      ]
+    },
+    "unweighted": {
+      "path": "results/logit_calibration_flank400_seed11_epoch11_fullpopulation_validonly_v2_steps6000/temperature_unweighted_best.txt",
+      "sha256": "b10f07c3b6ada86a7d3fc62740b1fea79bbec7fd9dcd982f9b7b208afb4d5ab5",
+      "value": [
+        0.6018680334,
+        0.3171447515,
+        0.3378458917
+      ]
+    }
+  },
+  "total_positions_seen": 421290000,
+  "total_sequences_seen": 84258,
+  "valid_nonsplice_positions_seen": 407170634,
+  "valid_nonsplice_weight": 814.341268,
+  "valid_positions_seen": 407278622
+}

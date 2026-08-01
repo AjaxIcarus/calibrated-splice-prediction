@@ -1,0 +1,15 @@
+PASS: reconstructed all per-chromosome ECEs; maximum error=2.58e-16
+PASS: pooled 416,140,000 positions
+
+                    method  total_positions  pooled_multiclass_ece  pooled_multiclass_nll  min_chromosome_ece  max_chromosome_ece
+              uncalibrated        416140000               0.001507               0.001698            0.001428            0.001589
+         fixed_global_T1p1        416140000               0.002519               0.002717            0.002397            0.002640
+        unweighted_vectorT        416140000               0.000047               0.002062            0.000041            0.000061
+   genome_weighted_vectorT        416140000               0.000021               0.000252            0.000016            0.000028
+openspliceai_style_vectorT        416140000               0.000005               0.000244            0.000002            0.000011
+
+OSAI minus genome-weighted
+ECE difference: -1.6316495106396586e-05
+NLL difference: -8.020931961654572e-06
+
+Wrote prefix: results/flank400_chromosome_transfer_seed11_epoch11_recomputed

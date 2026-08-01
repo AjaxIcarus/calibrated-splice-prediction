@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-08-01T05:48:44.840473+00:00",
+  "script_path": "/home/unix_s/projects/calibrated-splice-prediction/scripts/make_flank400_reliability_diagrams_paired_v3.py",
+  "script_sha256": "75ae3d78387b7b1ebf1c1286c84b43d29af6fcdd8ce9b7fce5da2bc21f27912c",
+  "model_label": "seed-23 epoch-14",
+  "artifact_tag": "flank400_seed23_epoch14_v2",
+  "n_bins": 15,
+  "binning": {
+    "type": "equal_width",
+    "interval_convention": "floor(probability * n_bins), clipped to n_bins - 1",
+    "ece_weighting": "reconstructed valid-position target population"
+  },
+  "numeric_path": "float64 NumPy softmax for all methods",
+  "cache": {
+    "cache_path": "results/logit_cache_flank400_seed23_epoch14_fullpopulation_validonly_v2/test_sampled_logits.npz",
+    "cache_sha256": "7acf7e9e98a534c5c368b39a5ffca95bdd73004f098459fc51b88cf72f677e5e",
+    "cache_schema_version": 2,
+    "all_sequences_included": true,
+    "padding_excluded_from_sampling": true,
+    "total_sequences_seen": 84258,
+    "total_positions_seen": 421290000,
+    "valid_positions_seen": 407278622,
+    "padding_positions_seen": 14011378,
+    "positive_positions_seen": 107988,
+    "valid_nonsplice_positions_seen": 407170634,
+    "negatives_seen_total": 407170634,
+    "sampled_negatives": 500000,
+    "valid_nonsplice_weight": 814.341268,
+    "cache_random_seed": 11,
+    "sample_class_counts": [
+      500000,
+      53994,
+      53994
+    ],
+    "sample_size": 607988,
+    "reconstructed_target_weight_sum": 407278622.0
+  },
+  "input_files": {
+    "results/logit_calibration_flank400_seed23_epoch14_fullpopulation_validonly_v2_steps6000/temperature_unweighted_best.txt": "5804fc1631ffa33b795ba455c4ff5f3d3d102b0a71f84a4ae51ee843cd5ec2c2",
+    "results/logit_calibration_flank400_seed23_epoch14_fullpopulation_validonly_v2_steps6000/temperature_target_weighted_best.txt": "2d52b3881d812e24900ebdd0ac98590d2d0964e62772447a06d61abc97e187af",
+    "results/openspliceai_style_vectorT_flank400_seed23_epoch14_fullval_validonly_v2/temperature_best.txt": "93f179ed36a1c7ad27bb5f2086e5122fc7c6682759d5c06dc5cd4fefdc1d7eda",
+    "results/paired_bootstrap_flank400_seed23_epoch14_fullpopulation_validonly_v2/point_estimates.csv": "f2cb2e59ae9a514e9ebec8c4aa2f6f975bc4e5679d65f7464e12e33e6f7043cc"
+  },
+  "temperatures": {
+    "uncalibrated": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "global_T_1.1": [
+      1.1,
+      1.1,
+      1.1
+    ],
+    "true_logit_unweighted_vector_T": [
+      0.7556391358,
+      0.290330857,
+      0.405046761
+    ],
+    "true_logit_target_weighted_vector_T": [
+      0.375382483,
+      0.3907676935,
+      0.3581668437
+    ],
+    "openspliceai_style_full_validation_vector_T_v2": [
+      0.3838234544,
+      0.3817459047,
+      0.3793499172
+    ]
+  },
+  "method_order": [
+    "uncalibrated",
+    "global_T_1.1",
+    "true_logit_unweighted_vector_T",
+    "true_logit_target_weighted_vector_T",
+    "openspliceai_style_full_validation_vector_T_v2"
+  ],
+  "point_estimate_validation": {
+    "source": "results/paired_bootstrap_flank400_seed23_epoch14_fullpopulation_validonly_v2/point_estimates.csv",
+    "metrics": [
+      "weighted_multiclass_ece",
+      "acceptor_ece",
+      "donor_ece"
+    ],
+    "rtol": 1e-07,
+    "atol": 5e-12,
+    "status": "passed"
+  },
+  "outputs": [
+    "reliability_bins.csv",
+    "reliability_summary.csv",
+    "reliability_diagrams_flank400_seed23_epoch14_v2.png",
+    "reliability_diagrams_flank400_seed23_epoch14_v2.pdf",
+    "reliability_argmax_flank400_seed23_epoch14_v2.png",
+    "reliability_acceptor_flank400_seed23_epoch14_v2.png",
+    "reliability_donor_flank400_seed23_epoch14_v2.png",
+    "reliability_metadata.json"
+  ]
+}

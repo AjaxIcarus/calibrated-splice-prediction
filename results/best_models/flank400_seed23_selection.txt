@@ -1,0 +1,8 @@
+seed: 23
+maximum epochs: 15
+early-stopping patience: 2
+criterion: minimum validation loss
+selected epoch: 14
+validation loss: 6.5928128606174141e-05
+checkpoint: results/best_models/flank400_seed23_focal_epoch14_best.pt
+sha256: 93945abda428fdbfe7996f0639264f2ee9ebdf909d445886e7f843f6b5a923a0

@@ -1,0 +1,81 @@
+{
+  "fit": {
+    "best_target_weighted_validation_nll": 0.0002373741299379617,
+    "best_unweighted_validation_nll": 0.004173820838332176,
+    "learning_rate": 0.01,
+    "steps": 6000,
+    "target_weighted_temperature": [
+      0.3753824830055237,
+      0.3907676935195923,
+      0.3581668436527252
+    ],
+    "temperature_bounds": [
+      0.05,
+      5.0
+    ],
+    "unweighted_temperature": [
+      0.7556391358375549,
+      0.2903308570384979,
+      0.4050467610359192
+    ]
+  },
+  "objective_distinction": {
+    "target_weighted": "Cross-entropy with sampled non-splice positions weighted by valid_nonsplice_positions_seen / sampled_negatives",
+    "unweighted": "Unweighted cross-entropy on the sampled, splice-enriched validation cache"
+  },
+  "pipeline_version": 2,
+  "test_cache": {
+    "class_counts": [
+      500000,
+      53994,
+      53994
+    ],
+    "metadata": {
+      "all_sequences_included": 1,
+      "cache_schema_version": 2,
+      "dataset_path": "data/processed_h5_flank400/dataset_test.h5",
+      "max_probability_row_sum_error": 1.7881393432617188e-07,
+      "max_softmax_probability_difference": 1.4645978352323397e-07,
+      "negatives_seen_total": 407170634,
+      "padding_excluded_from_sampling": 1,
+      "padding_positions_seen": 14011378,
+      "positive_positions_seen": 107988,
+      "random_seed": 11,
+      "sampled_negatives": 500000,
+      "total_positions_seen": 421290000,
+      "total_sequences_seen": 84258,
+      "valid_nonsplice_positions_seen": 407170634,
+      "valid_nonsplice_weight": 814.341268,
+      "valid_positions_seen": 407278622
+    },
+    "path": "results/logit_cache_flank400_seed23_epoch14_fullpopulation_validonly_v2/test_sampled_logits.npz",
+    "sha256": "7acf7e9e98a534c5c368b39a5ffca95bdd73004f098459fc51b88cf72f677e5e"
+  },
+  "validation_cache": {
+    "class_counts": [
+      500000,
+      12955,
+      12955
+    ],
+    "metadata": {
+      "all_sequences_included": 1,
+      "cache_schema_version": 2,
+      "dataset_path": "data/processed_h5_flank400/dataset_validation.h5",
+      "max_probability_row_sum_error": 1.7881393432617188e-07,
+      "max_softmax_probability_difference": 1.470876198617077e-07,
+      "negatives_seen_total": 88990332,
+      "padding_excluded_from_sampling": 1,
+      "padding_positions_seen": 3413758,
+      "positive_positions_seen": 25910,
+      "random_seed": 11,
+      "sampled_negatives": 500000,
+      "total_positions_seen": 92430000,
+      "total_sequences_seen": 18486,
+      "valid_nonsplice_positions_seen": 88990332,
+      "valid_nonsplice_weight": 177.980664,
+      "valid_positions_seen": 89016242
+    },
+    "path": "results/logit_cache_flank400_seed23_epoch14_fullpopulation_validonly_v2/validation_sampled_logits.npz",
+    "sha256": "46e95f87472714ec59c9042483135054b1bc1c467c2d7f33860ca2e517dfc4e5"
+  }
+}

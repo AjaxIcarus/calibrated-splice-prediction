@@ -1,0 +1,2 @@
+method,T_nonsplice,T_acceptor,T_donor,weighted_multiclass_ece,weighted_nll,acceptor_ece,donor_ece,acceptor_auprc,donor_auprc,total_positions_seen,positives_seen,sampled_negatives,negative_weight
+openspliceai_style_fullval_seed11_epoch11,0.39899853,0.3891893,0.3920534,1.428087201884512e-05,0.00021459632289898357,1.0933514474980477e-05,1.5407511013858656e-05,0.9995611608732204,0.9996865058562638,416160000,106088,500000,832.107824

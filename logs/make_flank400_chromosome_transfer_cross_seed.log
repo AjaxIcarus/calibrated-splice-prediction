@@ -1,0 +1,43 @@
+PASS: matched seed-11 and seed-23 chromosome-transfer comparison validated
+PASS: each model covers 416,140,000 positions
+
+POOLED CROSS-SEED ROBUSTNESS
+ model_role          model                     method  pooled_multiclass_ece  pooled_multiclass_nll  ece_reduction_percent_vs_uncalibrated  nll_reduction_percent_vs_uncalibrated
+    primary seed11_epoch11               uncalibrated         0.001507295858         0.001698358538                         0.000000000000                         0.000000000000
+    primary seed11_epoch11          fixed_global_T1p1         0.002519030113         0.002716969665                       -67.122473009592                       -59.976212592401
+    primary seed11_epoch11         unweighted_vectorT         0.000046921955         0.002062224107                        96.887010952150                       -21.424543838621
+    primary seed11_epoch11    genome_weighted_vectorT         0.000020870360         0.000252214137                        98.615377351470                        85.149535187431
+    primary seed11_epoch11 openspliceai_style_vectorT         0.000004553865         0.000244193205                        99.697878508941                        85.621810727766
+replication seed23_epoch14               uncalibrated         0.001544696386         0.001725679388                         0.000000000000                         0.000000000000
+replication seed23_epoch14          fixed_global_T1p1         0.002586726680         0.002775464228                       -67.458582993255                       -60.833133136033
+replication seed23_epoch14         unweighted_vectorT         0.000050493954         0.001974532575                        96.731140518139                       -14.420592193153
+replication seed23_epoch14    genome_weighted_vectorT         0.000027388731         0.000240350851                        98.226918183540                        86.072102828915
+replication seed23_epoch14 openspliceai_style_vectorT         0.000003084788         0.000230533274                        99.800298098551                        86.641013618068
+
+SEED-23 MINUS SEED-11
+                    method  pooled_multiclass_ece_primary  pooled_multiclass_nll_primary  pooled_multiclass_ece_replication  pooled_multiclass_nll_replication  pooled_multiclass_ece_replication_minus_primary  pooled_multiclass_ece_percent_change_replication_vs_primary  pooled_multiclass_nll_replication_minus_primary  pooled_multiclass_nll_percent_change_replication_vs_primary
+              uncalibrated                 0.001507295858                 0.001698358538                     0.001544696386                     0.001725679388                                   0.000037400529                                               2.481299763173                                   0.000027320850                                               1.608662116090
+         fixed_global_T1p1                 0.002519030113                 0.002716969665                     0.002586726680                     0.002775464228                                   0.000067696567                                               2.687406023863                                   0.000058494563                                               2.152933971057
+        unweighted_vectorT                 0.000046921955                 0.002062224107                     0.000050493954                     0.001974532575                                   0.000003571999                                               7.612639586910                                  -0.000087691532                                              -4.252279450778
+   genome_weighted_vectorT                 0.000020870360                 0.000252214137                     0.000027388731                     0.000240350851                                   0.000006518371                                              31.232671464794                                  -0.000011863286                                              -4.703656383425
+openspliceai_style_vectorT                 0.000004553865                 0.000244193205                     0.000003084788                     0.000230533274                                  -0.000001469077                                             -32.259997943531                                  -0.000013659931                                              -5.593902834734
+
+OSAI VERSUS GENOME-WEIGHTED
+ model_role          model  seed  epoch  ece_osai_minus_genome_weighted  nll_osai_minus_genome_weighted  ece_reduction_percent_osai_vs_genome_weighted  nll_reduction_percent_osai_vs_genome_weighted
+    primary seed11_epoch11    11     11                 -0.000016316495                 -0.000008020932                                78.180229004613                                 3.180207126815
+replication seed23_epoch14    23     14                 -0.000024303943                 -0.000009817576                                88.737017119279                                 4.084685449389
+
+PAIRED CHROMOSOME SUMMARY
+                    method  n_chromosomes  mean_ece_difference  sd_ece_difference  min_ece_difference  max_ece_difference  replication_lower_ece_count  mean_nll_difference  sd_nll_difference  min_nll_difference  max_nll_difference  replication_lower_nll_count
+         fixed_global_T1p1              5       0.000068596366     0.000012526288      0.000050125601      0.000083738911                            0       0.000059905237     0.000015816701      0.000036296943      0.000077175102                            0
+   genome_weighted_vectorT              5       0.000005945227     0.000001081996      0.000004780689      0.000007342312                            0      -0.000011482875     0.000003994836     -0.000015933657     -0.000006490379                            5
+openspliceai_style_vectorT              5      -0.000000867181     0.000001356429     -0.000002827951      0.000000320724                            3      -0.000013427179     0.000004622592     -0.000019674215     -0.000007974587                            5
+              uncalibrated              5       0.000037921610     0.000007377146      0.000027060539      0.000046859393                            0       0.000028363791     0.000010863181      0.000012241544      0.000039473626                            0
+        unweighted_vectorT              5       0.000003575679     0.000002929467     -0.000001011257      0.000006906179                            1      -0.000086907776     0.000021394138     -0.000113175251     -0.000064217398                            5
+
+Wrote:
+  results/flank400_chromosome_transfer_cross_seed_method_robustness.csv
+  results/flank400_chromosome_transfer_cross_seed_pooled_comparison.csv
+  results/flank400_chromosome_transfer_cross_seed_paired_by_chromosome.csv
+  results/flank400_chromosome_transfer_cross_seed_paired_summary.csv
+  results/flank400_chromosome_transfer_cross_seed_key_contrasts.csv

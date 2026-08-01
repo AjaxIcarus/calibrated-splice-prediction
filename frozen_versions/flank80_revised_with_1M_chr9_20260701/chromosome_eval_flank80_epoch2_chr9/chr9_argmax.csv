@@ -1,0 +1,7 @@
+method,predicted_class,predicted_count,true_positive_count
+uncalibrated,0,52877405,52864773
+uncalibrated,1,840,597
+uncalibrated,2,1755,1264
+openspliceai_style_vectorT,0,52875483,52863883
+openspliceai_style_vectorT,1,1733,1054
+openspliceai_style_vectorT,2,2784,1839

@@ -1,0 +1,124 @@
+
+Inspecting: data/processed_h5/dataset_test.h5
+Exists: True
+Size: 5.885 GB
+
+Root attributes:
+
+Top-level keys:
+  X0: DATASET shape=(881, 15000, 4), dtype=int8
+  X1: DATASET shape=(1091, 15000, 4), dtype=int8
+  X10: DATASET shape=(991, 15000, 4), dtype=int8
+  X11: DATASET shape=(377, 15000, 4), dtype=int8
+  X12: DATASET shape=(466, 15000, 4), dtype=int8
+  X13: DATASET shape=(485, 15000, 4), dtype=int8
+  X14: DATASET shape=(993, 15000, 4), dtype=int8
+  X15: DATASET shape=(2142, 15000, 4), dtype=int8
+  X16: DATASET shape=(1097, 15000, 4), dtype=int8
+  X17: DATASET shape=(1704, 15000, 4), dtype=int8
+  X18: DATASET shape=(1490, 15000, 4), dtype=int8
+  X19: DATASET shape=(1819, 15000, 4), dtype=int8
+  X2: DATASET shape=(951, 15000, 4), dtype=int8
+  X20: DATASET shape=(2144, 15000, 4), dtype=int8
+  X21: DATASET shape=(1999, 15000, 4), dtype=int8
+  X22: DATASET shape=(775, 15000, 4), dtype=int8
+  X23: DATASET shape=(1147, 15000, 4), dtype=int8
+  X24: DATASET shape=(3519, 15000, 4), dtype=int8
+  X25: DATASET shape=(1776, 15000, 4), dtype=int8
+  X26: DATASET shape=(1683, 15000, 4), dtype=int8
+  X27: DATASET shape=(1698, 15000, 4), dtype=int8
+  X28: DATASET shape=(2412, 15000, 4), dtype=int8
+  X29: DATASET shape=(1421, 15000, 4), dtype=int8
+  X3: DATASET shape=(716, 15000, 4), dtype=int8
+  X30: DATASET shape=(1534, 15000, 4), dtype=int8
+  X31: DATASET shape=(2305, 15000, 4), dtype=int8
+  X32: DATASET shape=(2000, 15000, 4), dtype=int8
+  X33: DATASET shape=(2762, 15000, 4), dtype=int8
+  X34: DATASET shape=(1520, 15000, 4), dtype=int8
+  X35: DATASET shape=(1333, 15000, 4), dtype=int8
+  X36: DATASET shape=(1571, 15000, 4), dtype=int8
+  X37: DATASET shape=(1980, 15000, 4), dtype=int8
+  X38: DATASET shape=(797, 15000, 4), dtype=int8
+  X39: DATASET shape=(2014, 15000, 4), dtype=int8
+  X4: DATASET shape=(899, 15000, 4), dtype=int8
+  X40: DATASET shape=(2175, 15000, 4), dtype=int8
+  X41: DATASET shape=(1801, 15000, 4), dtype=int8
+  X42: DATASET shape=(1816, 15000, 4), dtype=int8
+  X43: DATASET shape=(1074, 15000, 4), dtype=int8
+  X44: DATASET shape=(1637, 15000, 4), dtype=int8
+  X45: DATASET shape=(1967, 15000, 4), dtype=int8
+  X46: DATASET shape=(1582, 15000, 4), dtype=int8
+  X47: DATASET shape=(1728, 15000, 4), dtype=int8
+  X48: DATASET shape=(2550, 15000, 4), dtype=int8
+  X49: DATASET shape=(966, 15000, 4), dtype=int8
+  X5: DATASET shape=(903, 15000, 4), dtype=int8
+  X50: DATASET shape=(2051, 15000, 4), dtype=int8
+  X51: DATASET shape=(1470, 15000, 4), dtype=int8
+  X52: DATASET shape=(1530, 15000, 4), dtype=int8
+  X53: DATASET shape=(921, 15000, 4), dtype=int8
+  X54: DATASET shape=(541, 15000, 4), dtype=int8
+  X55: DATASET shape=(172, 15000, 4), dtype=int8
+  X6: DATASET shape=(1496, 15000, 4), dtype=int8
+  X7: DATASET shape=(2689, 15000, 4), dtype=int8
+  X8: DATASET shape=(1718, 15000, 4), dtype=int8
+  X9: DATASET shape=(979, 15000, 4), dtype=int8
+  Y0: DATASET shape=(1, 881, 5000, 3), dtype=int8
+  Y1: DATASET shape=(1, 1091, 5000, 3), dtype=int8
+  Y10: DATASET shape=(1, 991, 5000, 3), dtype=int8
+  Y11: DATASET shape=(1, 377, 5000, 3), dtype=int8
+  Y12: DATASET shape=(1, 466, 5000, 3), dtype=int8
+  Y13: DATASET shape=(1, 485, 5000, 3), dtype=int8
+  Y14: DATASET shape=(1, 993, 5000, 3), dtype=int8
+  Y15: DATASET shape=(1, 2142, 5000, 3), dtype=int8
+  Y16: DATASET shape=(1, 1097, 5000, 3), dtype=int8
+  Y17: DATASET shape=(1, 1704, 5000, 3), dtype=int8
+  Y18: DATASET shape=(1, 1490, 5000, 3), dtype=int8
+  Y19: DATASET shape=(1, 1819, 5000, 3), dtype=int8
+  Y2: DATASET shape=(1, 951, 5000, 3), dtype=int8
+  Y20: DATASET shape=(1, 2144, 5000, 3), dtype=int8
+  Y21: DATASET shape=(1, 1999, 5000, 3), dtype=int8
+  Y22: DATASET shape=(1, 775, 5000, 3), dtype=int8
+  Y23: DATASET shape=(1, 1147, 5000, 3), dtype=int8
+  Y24: DATASET shape=(1, 3519, 5000, 3), dtype=int8
+  Y25: DATASET shape=(1, 1776, 5000, 3), dtype=int8
+  Y26: DATASET shape=(1, 1683, 5000, 3), dtype=int8
+  Y27: DATASET shape=(1, 1698, 5000, 3), dtype=int8
+  Y28: DATASET shape=(1, 2412, 5000, 3), dtype=int8
+  Y29: DATASET shape=(1, 1421, 5000, 3), dtype=int8
+  Y3: DATASET shape=(1, 716, 5000, 3), dtype=int8
+  Y30: DATASET shape=(1, 1534, 5000, 3), dtype=int8
+  Y31: DATASET shape=(1, 2305, 5000, 3), dtype=int8
+  Y32: DATASET shape=(1, 2000, 5000, 3), dtype=int8
+  Y33: DATASET shape=(1, 2762, 5000, 3), dtype=int8
+  Y34: DATASET shape=(1, 1520, 5000, 3), dtype=int8
+  Y35: DATASET shape=(1, 1333, 5000, 3), dtype=int8
+  Y36: DATASET shape=(1, 1571, 5000, 3), dtype=int8
+  Y37: DATASET shape=(1, 1980, 5000, 3), dtype=int8
+  Y38: DATASET shape=(1, 797, 5000, 3), dtype=int8
+  Y39: DATASET shape=(1, 2014, 5000, 3), dtype=int8
+  Y4: DATASET shape=(1, 899, 5000, 3), dtype=int8
+  Y40: DATASET shape=(1, 2175, 5000, 3), dtype=int8
+  Y41: DATASET shape=(1, 1801, 5000, 3), dtype=int8
+  Y42: DATASET shape=(1, 1816, 5000, 3), dtype=int8
+  Y43: DATASET shape=(1, 1074, 5000, 3), dtype=int8
+  Y44: DATASET shape=(1, 1637, 5000, 3), dtype=int8
+  Y45: DATASET shape=(1, 1967, 5000, 3), dtype=int8
+  Y46: DATASET shape=(1, 1582, 5000, 3), dtype=int8
+  Y47: DATASET shape=(1, 1728, 5000, 3), dtype=int8
+  Y48: DATASET shape=(1, 2550, 5000, 3), dtype=int8
+  Y49: DATASET shape=(1, 966, 5000, 3), dtype=int8
+  Y5: DATASET shape=(1, 903, 5000, 3), dtype=int8
+  Y50: DATASET shape=(1, 2051, 5000, 3), dtype=int8
+  Y51: DATASET shape=(1, 1470, 5000, 3), dtype=int8
+  Y52: DATASET shape=(1, 1530, 5000, 3), dtype=int8
+  Y53: DATASET shape=(1, 921, 5000, 3), dtype=int8
+  Y54: DATASET shape=(1, 541, 5000, 3), dtype=int8
+  Y55: DATASET shape=(1, 172, 5000, 3), dtype=int8
+  Y6: DATASET shape=(1, 1496, 5000, 3), dtype=int8
+  Y7: DATASET shape=(1, 2689, 5000, 3), dtype=int8
+  Y8: DATASET shape=(1, 1718, 5000, 3), dtype=int8
+  Y9: DATASET shape=(1, 979, 5000, 3), dtype=int8
+
+Potential metadata datasets:
+
+Printed 0 potential metadata items.

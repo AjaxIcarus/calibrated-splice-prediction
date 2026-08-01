@@ -1,0 +1,8 @@
+# True-logit Main Results Table
+
+| Method                         | Weighted multiclass ECE   | Weighted multiclass NLL   | Weighted acceptor ECE   | Weighted donor ECE   | Acceptor AUPRC   | Donor AUPRC   |
+|:-------------------------------|:--------------------------|:--------------------------|:------------------------|:---------------------|:-----------------|:--------------|
+| Uncalibrated                   | 0.005610                  | 0.006240                  | 0.002737                | 0.002874             | 0.9909           | 0.9950        |
+| Global T=1.1                   | 0.008538                  | 0.009212                  | 0.004121                | 0.004413             | 0.9909           | 0.9950        |
+| Logit unweighted vector T      | 0.000445                  | 0.010417                  | 0.003115                | 0.002911             | 0.9881           | 0.9932        |
+| Logit genome-weighted vector T | 0.000044                  | 0.000818                  | 0.000028                | 0.000032             | 0.9909           | 0.9950        |

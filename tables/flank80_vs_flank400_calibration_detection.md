@@ -1,0 +1,14 @@
+# Flank-80 vs flank-400 calibration and detection comparison
+
+| context   | checkpoint   | method                              |   weighted_multiclass_ece |   weighted_nll |   acceptor_ece |   donor_ece |   acceptor_auprc |   donor_auprc |
+|:----------|:-------------|:------------------------------------|--------------------------:|---------------:|---------------:|------------:|-----------------:|--------------:|
+| flank80   | epoch2       | uncalibrated                        |               0.00560995  |    0.00623967  |    0.00273743  | 0.00287401  |         0.990909 |      0.994971 |
+| flank80   | epoch2       | global_T_1.1                        |               0.00853761  |    0.00921152  |    0.00412074  | 0.00441303  |         0.99091  |      0.994974 |
+| flank80   | epoch2       | true-logit unweighted vector T      |               0.000445172 |    0.0104172   |    0.00311513  | 0.00291125  |         0.988083 |      0.993197 |
+| flank80   | epoch2       | true-logit genome-weighted vector T |               4.39269e-05 |    0.000818163 |    2.81008e-05 | 3.17044e-05 |         0.9909   |      0.994963 |
+| flank80   | epoch2       | OpenSpliceAI-style vector T         |               1.12525e-05 |    0.000804295 |    1.5251e-05  | 1.62369e-05 |         0.990884 |      0.994971 |
+| flank400  | epoch8       | uncalibrated                        |               0.00163185  |    0.00183797  |    0.000759374 | 0.000878562 |         0.999464 |      0.99959  |
+| flank400  | epoch8       | global_T_1.1                        |               0.00269453  |    0.00290926  |    0.00124701  | 0.00145222  |         0.999464 |      0.99959  |
+| flank400  | epoch8       | true-logit unweighted vector T      |               9.85779e-05 |    0.00228727  |    0.000626978 | 0.000557483 |         0.999415 |      0.999547 |
+| flank400  | epoch8       | true-logit genome-weighted vector T |               2.89857e-05 |    0.000267649 |    1.96215e-05 | 1.74502e-05 |         0.999463 |      0.999588 |
+| flank400  | epoch8       | OpenSpliceAI-style vector T         |               1.16824e-05 |    0.00025782  |    9.99241e-06 | 1.40593e-05 |         0.999464 |      0.999589 |

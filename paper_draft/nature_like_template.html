@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>$title$</title>
+  $for(css)$
+  <link rel="stylesheet" href="$css$">
+  $endfor$
+</head>
+<body>
+
+<header class="article-header">
+  <div class="journal-line">
+    <span>ARTICLES</span>
+  </div>
+
+  <h1 class="article-title">$title$</h1>
+
+  $if(author)$
+  <div class="authors">$for(author)$$author$$sep$, $endfor$</div>
+  $endif$
+
+  $if(affiliation)$
+  <div class="affiliation">$affiliation$</div>
+  $endif$
+
+  $if(abstract)$
+  <div class="abstract-block">
+    $abstract$
+  </div>
+  $endif$
+</header>
+
+<main class="article-body">
+$body$
+</main>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+@page {
+  size: Letter;
+  margin: 0.55in 0.55in 0.62in 0.55in;
+
+  @top-left {
+    content: "ARTICLES";
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    color: #555;
+  }
+
+  @top-right {
+    content: "Draft manuscript";
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    color: #555;
+  }
+
+  @bottom-right {
+    content: counter(page);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 7pt;
+    color: #222;
+  }
+}
+
+html {
+  font-size: 9pt;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  color: #111;
+  line-height: 1.18;
+  margin: 0;
+}
+
+.article-header {
+  margin-bottom: 14pt;
+}
+
+.journal-line {
+  border-bottom: 0.8pt solid #222;
+  text-align: right;
+  margin-bottom: 10pt;
+  padding-bottom: 4pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22pt;
+  letter-spacing: 2.5pt;
+  color: #b5b5b5;
+}
+
+.article-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 27pt;
+  line-height: 0.96;
+  font-weight: 800;
+  margin: 0 0 7pt 0;
+  max-width: 6.5in;
+}
+
+.authors {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8.5pt;
+  font-weight: 600;
+  margin: 0 0 3pt 0;
+}
+
+.affiliation {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7.5pt;
+  color: #333;
+  margin-bottom: 10pt;
+}
+
+.abstract-block {
+  font-weight: 700;
+  font-size: 9pt;
+  line-height: 1.2;
+  margin: 8pt 0 12pt 0;
+  max-width: 7.2in;
+}
+
+.article-body {
+  column-count: 2;
+  column-gap: 0.28in;
+  column-fill: auto;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+  line-height: 1.05;
+  font-weight: 800;
+  margin: 11pt 0 5pt 0;
+  break-after: avoid;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.08;
+  font-weight: 800;
+  margin: 9pt 0 4pt 0;
+  break-after: avoid;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  line-height: 1.08;
+  font-weight: 800;
+  margin: 8pt 0 3pt 0;
+  break-after: avoid;
+}
+
+p {
+  margin: 0 0 5pt 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+ul, ol {
+  margin-top: 2pt;
+  margin-bottom: 6pt;
+  padding-left: 14pt;
+}
+
+li {
+  margin-bottom: 2pt;
+}
+
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: 8pt 0 8pt 0;
+  break-inside: avoid;
+}
+
+figcaption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 7.5pt;
+  line-height: 1.15;
+  margin-top: 3pt;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 6.7pt;
+  line-height: 1.08;
+  margin: 6pt 0 8pt 0;
+  break-inside: avoid;
+}
+
+th {
+  font-weight: 700;
+  border-top: 0.8pt solid #222;
+  border-bottom: 0.5pt solid #222;
+  padding: 2.2pt;
+  text-align: left;
+}
+
+td {
+  border-bottom: 0.3pt solid #aaa;
+  padding: 2.2pt;
+  vertical-align: top;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 7.2pt;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-size: 7pt;
+  line-height: 1.1;
+  border-left: 1.5pt solid #ccc;
+  padding-left: 5pt;
+  break-inside: avoid;
+}
+
+.references, #references {
+  font-size: 7.5pt;
+  line-height: 1.15;
+}
+
+hr {
+  border: none;
+  border-top: 0.5pt solid #888;
+  margin: 8pt 0;
+}

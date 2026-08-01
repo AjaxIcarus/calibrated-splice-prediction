@@ -1,0 +1,10 @@
+method,metric,value
+uncalibrated,weighted_multiclass_ece,0.00163185337466148
+uncalibrated,acceptor_ece,0.0007593744080830936
+uncalibrated,donor_ece,0.0008785623471538985
+true-logit genome-weighted vector T,weighted_multiclass_ece,2.8998761017282417e-05
+true-logit genome-weighted vector T,acceptor_ece,1.9621504832945484e-05
+true-logit genome-weighted vector T,donor_ece,1.7450159412597676e-05
+OpenSpliceAI-style vector T,weighted_multiclass_ece,1.1682367599222359e-05
+OpenSpliceAI-style vector T,acceptor_ece,9.992408681289143e-06
+OpenSpliceAI-style vector T,donor_ece,1.4059267655283573e-05

@@ -1,0 +1,9 @@
+# True-logit Main Results Table with OpenSpliceAI-style Baseline
+
+| Method                                 |   Weighted multiclass ECE |   Weighted multiclass NLL |   Weighted acceptor ECE |   Weighted donor ECE |   Acceptor AUPRC |   Donor AUPRC |
+|:---------------------------------------|--------------------------:|--------------------------:|------------------------:|---------------------:|-----------------:|--------------:|
+| Uncalibrated                           |                  0.00561  |                  0.00624  |                0.002737 |             0.002874 |           0.9909 |        0.995  |
+| Global T=1.1                           |                  0.008538 |                  0.009212 |                0.004121 |             0.004413 |           0.9909 |        0.995  |
+| Logit unweighted vector T              |                  0.000445 |                  0.010417 |                0.003115 |             0.002911 |           0.9881 |        0.9932 |
+| Logit genome-weighted vector T         |                  4.4e-05  |                  0.000818 |                2.8e-05  |             3.2e-05  |           0.9909 |        0.995  |
+| OpenSpliceAI-style unweighted vector T |                  1.1e-05  |                  0.000804 |                1.5e-05  |             1.6e-05  |           0.9909 |        0.995  |

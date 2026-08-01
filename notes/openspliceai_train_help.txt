@@ -1,0 +1,37 @@
+usage: openspliceai train [-h] [--epochs EPOCHS]
+                          [--scheduler {MultiStepLR,CosineAnnealingWarmRestarts}]
+                          [--early-stopping] [--patience PATIENCE]
+                          --output-dir OUTPUT_DIR --project-name PROJECT_NAME
+                          [--exp-num EXP_NUM]
+                          [--flanking-size {80,400,2000,10000}]
+                          [--random-seed RANDOM_SEED] --train-dataset
+                          TRAIN_DATASET --test-dataset TEST_DATASET
+                          [--loss {cross_entropy_loss,focal_loss}]
+                          [--model MODEL]
+
+options:
+  -h, --help            show this help message and exit
+  --epochs EPOCHS, -n EPOCHS
+                        Number of epochs for training
+  --scheduler {MultiStepLR,CosineAnnealingWarmRestarts}, -s {MultiStepLR,CosineAnnealingWarmRestarts}
+                        Learning rate scheduler
+  --early-stopping, -E  Enable early stopping
+  --patience PATIENCE, -P PATIENCE
+                        Number of epochs to wait before early stopping
+  --output-dir OUTPUT_DIR, -o OUTPUT_DIR
+                        Output directory to save the data
+  --project-name PROJECT_NAME, -p PROJECT_NAME
+                        Project name for the train experiment
+  --exp-num EXP_NUM, -e EXP_NUM
+                        Experiment number
+  --flanking-size {80,400,2000,10000}, -f {80,400,2000,10000}
+                        Flanking sequence size
+  --random-seed RANDOM_SEED, -r RANDOM_SEED
+                        Random seed for reproducibility
+  --train-dataset TRAIN_DATASET, -train TRAIN_DATASET
+                        Path to the training dataset
+  --test-dataset TEST_DATASET, -test TEST_DATASET
+                        Path to the testing dataset
+  --loss {cross_entropy_loss,focal_loss}, -l {cross_entropy_loss,focal_loss}
+                        Loss function for training
+  --model MODEL, -m MODEL

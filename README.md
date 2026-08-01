@@ -1,0 +1,3 @@
+# Calibrated Splice-Site Prediction
+
+This project evaluates calibration and uncertainty in OpenSpliceAI-style splice-site prediction. The initial setup uses human MANE annotations and the GRCh38 reference genome to predict donor, acceptor, and non-splice sites from sequence. The first experiment evaluates predictive performance and probability calibration using F1, AUPRC, reliability diagrams, ECE, and NLL.

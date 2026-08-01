@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>$title$</title>
+  $for(css)$
+  <link rel="stylesheet" href="$css$">
+  $endfor$
+</head>
+<body>
+
+<header id="title-block-header">
+  <h1 class="title">$title$</h1>
+  $if(author)$
+  <div class="authors">
+    $for(author)$
+      <span>$author$</span>$sep$, 
+    $endfor$
+  </div>
+  $endif$
+</header>
+
+$if(abstract)$
+<section class="abstract">
+  <h2>Abstract</h2>
+  $abstract$
+</section>
+$endif$
+
+<main class="paper-body">
+$body$
+</main>
+
+</body>
+</html>

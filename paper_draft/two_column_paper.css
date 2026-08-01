@@ -1,0 +1,263 @@
+@page {
+  size: A4;
+  margin: 14mm 13mm 16mm 13mm;
+
+  @bottom-center {
+    content: counter(page);
+    font-family: "Liberation Serif", "Times New Roman", serif;
+    font-size: 8pt;
+  }
+}
+
+html {
+  font-family: "Liberation Serif", "Times New Roman", serif;
+  font-size: 9.5pt;
+  line-height: 1.22;
+  color: #000;
+}
+
+body {
+  margin: 0;
+}
+
+#title-block-header {
+  text-align: center;
+  margin: 0 8mm 4mm 8mm;
+  break-after: avoid;
+}
+
+#title-block-header .title {
+  font-size: 19pt;
+  line-height: 1.08;
+  margin: 0 0 3mm 0;
+  font-weight: 700;
+}
+
+#title-block-header .author,
+#title-block-header .date {
+  font-size: 10pt;
+  margin: 0.7mm 0;
+}
+
+#title-block-header .author {
+  font-style: italic;
+}
+
+.paper-abstract {
+  margin: 0 10mm 5mm 10mm;
+  font-size: 9pt;
+  line-height: 1.2;
+}
+
+.paper-abstract h2 {
+  font-size: 10.5pt;
+  text-align: center;
+  margin: 0 0 1.5mm 0;
+}
+
+.paper-abstract p {
+  margin: 0;
+  text-align: justify;
+}
+
+.paper-body {
+  column-count: 2;
+  column-gap: 7mm;
+  column-fill: balance;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Liberation Serif", "Times New Roman", serif;
+  line-height: 1.08;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+h1 {
+  column-span: all;
+  font-size: 14pt;
+  margin: 5mm 0 2mm 0;
+}
+
+h2 {
+  font-size: 11pt;
+  margin: 3.2mm 0 1.3mm 0;
+}
+
+h3 {
+  font-size: 9.8pt;
+  margin: 2.5mm 0 1mm 0;
+}
+
+p {
+  margin: 0 0 2.1mm 0;
+  text-align: justify;
+  orphans: 3;
+  widows: 3;
+}
+
+ol,
+ul {
+  margin: 1.2mm 0 2.2mm 4.5mm;
+  padding-left: 3.5mm;
+}
+
+li {
+  margin-bottom: 0.8mm;
+}
+
+code {
+  font-family: "Liberation Mono", "Courier New", monospace;
+  font-size: 7.7pt;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.wide-table {
+  width: 100%;
+  margin: 2.5mm 0 4mm 0;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+.wide-table > p:first-child {
+  margin: 0 0 1.4mm 0;
+  font-size: 8.7pt;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  table-layout: auto;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 8.1pt;
+  line-height: 1.12;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+thead {
+  display: table-header-group;
+}
+
+tr {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+th,
+td {
+  padding: 1.1mm 1.2mm;
+  vertical-align: top;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+th {
+  text-align: center;
+  border-top: 0.5pt solid #000;
+  border-bottom: 0.5pt solid #000;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0.5pt solid #000;
+}
+
+.wide-figure {
+  width: 100%;
+  margin: 2.5mm 0 4mm 0;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+figure {
+  margin: 3mm auto 4mm auto;
+  text-align: center;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+figure img,
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 76mm;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+.figure-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 2mm 0 4mm 0;
+  break-inside: avoid-page;
+  page-break-inside: avoid;
+}
+
+.figure-grid figure {
+  flex: 0 0 48.5%;
+  width: 48.5%;
+  margin: 0 0 3mm 0;
+}
+
+.figure-grid img {
+  width: 100%;
+  max-height: 55mm;
+  object-fit: contain;
+}
+
+.figure-grid figcaption {
+  font-size: 7.4pt;
+  line-height: 1.08;
+}
+
+figcaption {
+  margin-top: 1.2mm;
+  font-size: 8pt;
+  line-height: 1.12;
+  text-align: center;
+}
+
+blockquote {
+  margin: 2mm 3mm;
+  font-size: 8.8pt;
+}
+
+.references-section {
+  break-before: page;
+  page-break-before: always;
+}
+
+.references-section h1 {
+  margin-top: 0;
+  margin-bottom: 2.5mm;
+}
+
+#refs {
+  column-count: 2;
+  column-gap: 7mm;
+  font-size: 8pt;
+  line-height: 1.14;
+}
+
+#refs .csl-entry {
+  margin: 0 0 1.8mm 4mm;
+  text-indent: -4mm;
+  break-inside: avoid;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 700;
+}

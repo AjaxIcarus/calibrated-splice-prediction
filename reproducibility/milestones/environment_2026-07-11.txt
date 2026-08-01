@@ -1,0 +1,2 @@
+Python 3.12.3
+Linux DESKTOP-2RJ74O3 4.4.0-19041-Microsoft #5794-Microsoft Mon Apr 07 17:55:00 PST 2025 x86_64 x86_64 x86_64 GNU/Linux

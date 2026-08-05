@@ -21,7 +21,7 @@ RNA splicing is a central mechanism by which eukaryotic cells generate transcrip
 
 Deep learning subsequently shifted splice prediction from hand-engineered regulatory features toward direct sequence-to-sequence prediction. SpliceAI introduced a residual convolutional architecture that predicts whether each position in a pre-mRNA sequence is an acceptor, donor, or neither [@jaganathan2019spliceai]. Pangolin extended sequence-based prediction toward tissue-aware splice-site strength [@zeng2022pangolin]. OpenSpliceAI later provided a modular PyTorch implementation supporting retraining, transfer learning, prediction, variant analysis, and post-hoc calibration [@chao2025openspliceai].
 
-Most splice-site evaluations emphasize detection: whether true acceptor and donor sites receive higher scores than non-splice positions. Detection metrics are appropriate for annotation, variant prioritization, and candidate discovery. However, model scores are also commonly interpreted as confidence estimates. Such an interpretation requires calibration: among predictions assigned a particular probability, the empirical event frequency should be similar.
+Most splice-site evaluations emphasize detection: whether true acceptor and donor sites receive higher scores than non-splice positions. Detection metrics are appropriate for annotation, variant prioritization, and candidate discovery. However, model scores are also commonly interpreted as confidence estimates. Such an interpretation requires calibration: among predictions assigned a particular probability, the empirical event frequency should be similar [@jaganathan2019spliceai; @zeng2022pangolin; @chao2025openspliceai].
 
 Calibration is especially sensitive to the evaluation population in per-nucleotide splice-site prediction. Nearly all evaluated positions are non-splice, whereas acceptor and donor sites are rare. Efficient evaluation caches often retain every splice-site positive but subsample non-splice positions, creating a splice-enriched distribution. Calibration fitted or evaluated on this sampled distribution estimates probabilities for that distribution, not automatically for the full target-position population.
 
@@ -41,7 +41,7 @@ Our contributions are:
 
 ## Splicing codes and feature-based prediction
 
-Early computational models of splicing framed alternative splicing as a regulatory code. These approaches combined cis-regulatory motifs, conservation, exon and intron structure, and tissue context to predict exon inclusion or tissue-dependent splicing changes. They established that splicing regulation depends on combinations of sequence and transcript features, but their scope was constrained by manually designed representations.
+Early computational models of splicing framed alternative splicing as a regulatory code. These approaches combined cis-regulatory motifs, conservation, exon and intron structure, and tissue context to predict exon inclusion or tissue-dependent splicing changes. They established that splicing regulation depends on combinations of sequence and transcript features, but their scope was constrained by manually designed representations [@barash2010splicingcode].
 
 ## Deep learning for splice-site prediction
 
@@ -115,7 +115,7 @@ Splice-site positions received unit weight. These weights reconstruct the distri
 
 ## Calibration and detection metrics
 
-Probability quality was evaluated with target-weighted multiclass ECE, NLL, and Brier score, together with class-wise acceptor and donor reliability diagrams. Multiclass ECE used 15 equal-width bins of maximum class probability. NLL and Brier are proper scoring rules and were included to prevent apparently small ECE from being interpreted in isolation. Lower ECE, NLL, and Brier indicate better probability quality under the declared target population.
+Probability quality was evaluated with target-weighted multiclass ECE, NLL, and Brier score, together with class-wise acceptor and donor reliability diagrams. Multiclass ECE used 15 equal-width bins of maximum class probability. NLL and Brier are proper scoring rules and were included to prevent apparently small ECE from being interpreted in isolation [@gneiting2007proper]. Lower ECE, NLL, and Brier indicate better probability quality under the declared target population.
 
 Detection was evaluated separately using acceptor and donor AUPRC, top-k summaries, and threshold-specific precision and recall. The main cross-seed table reports target-weighted AUPRC, computed under the same reconstructed valid-position population. Sampled-cache AUPRC describes the splice-enriched cache and is not interchangeable with target-weighted AUPRC. Precision-recall summaries are more informative than ROC summaries for highly imbalanced tasks [@saito2015precisionrecall].
 
@@ -205,7 +205,7 @@ Ranking can remain nearly unchanged while probability interpretation changes sub
 
 Calibration is not an intrinsic property of a model independent of data. A predictor may be calibrated for one annotation, prior, or evaluation population and miscalibrated for another. In this study, “target prior” refers to all sequence positions across the GRCh38/MANE evaluation H5 gene/transcript records. It does not refer to every intergenic base in complete chromosomes or to noncanonical, cryptic, variant-altered, or tissue-specific splice sites.
 
-This distinction explains why unweighted vector scaling can optimize the splice-enriched sampled task while performing poorly under target-position NLL. Importance weighting changes the calibration objective to match the intended evaluation population. The OpenSpliceAI-style full-validation baseline targets the same natural validation distribution without relying on the sampled calibration cache, explaining its strong performance.
+This distinction explains why unweighted vector scaling can optimize the splice-enriched sampled task while performing poorly under target-position NLL. Importance weighting changes the calibration objective to match the intended evaluation population. The OpenSpliceAI-style full-validation baseline targets the same natural validation distribution without relying on the sampled calibration cache; this matching of fitting and evaluation priors is consistent with its strong performance.
 
 ## Interpretation of the OpenSpliceAI-style comparison
 
@@ -213,7 +213,7 @@ The local OpenSpliceAI-style full-validation vector-temperature baseline and tar
 
 ## Practical implications
 
-Probability thresholds should be chosen only after calibration and under the intended target population. Fixed threshold transfer across uncalibrated, globally scaled, and vector-scaled outputs can materially change precision and recall. When the downstream task is candidate discovery, ranking metrics may remain the most useful summary. When probabilities are used for risk interpretation or decision support, the calibration population and label definition must be documented.
+Probability thresholds should be selected and validated for the specific score transformation and intended target population. Calibration is required when a threshold is intended to carry a probability interpretation, whereas ranking or operating-point thresholds can be selected directly on validation data. Fixed threshold transfer across uncalibrated, globally scaled, and vector-scaled outputs can materially change precision and recall. When the downstream task is candidate discovery, ranking metrics may remain the most useful summary. When probabilities are used for risk interpretation or decision support, the calibration population and label definition must be documented.
 
 ## Limitations
 

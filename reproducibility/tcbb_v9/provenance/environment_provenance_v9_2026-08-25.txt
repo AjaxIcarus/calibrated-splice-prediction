@@ -1,0 +1,23 @@
+TCBB v9 environment provenance
+Date: 2026-08-25
+
+Repository requirements.txt SHA-256: 879561a21d8af8a536ea1cd6426fba4dbc11022e717bb5bc28764107d8e34a88
+Python: 3.12.3
+NumPy: 2.4.6
+Pandas: 3.0.3
+Matplotlib: 3.10.9
+Scikit-learn: 1.9.0
+SciPy: 1.17.1
+PyTorch: 2.12.0+cu130
+h5py: 3.16.0
+Biopython: 1.87
+tqdm: 4.68.2
+OpenSpliceAI: 0.0.5
+
+Platform: Linux-4.4.0-19041-Microsoft-x86_64-with-glibc2.39
+Python executable: /home/unix_s/projects/calibrated-splice-prediction/.venv_wsl/bin/python
+PyTorch CUDA build: 13.0
+CUDA available at audit time: False
+CUDA device count at audit time: 0
+
+Interpretation: the installed PyTorch build includes CUDA support, but no CUDA device was available to this audited WSL runtime.

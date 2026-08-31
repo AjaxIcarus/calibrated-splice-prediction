@@ -205,3 +205,9 @@ logs/
 !/logs/aggregate_flank400_chromosome_transfer_seed23_epoch14.log
 !/logs/make_flank400_chromosome_transfer_cross_seed.log
 # END AUTHORITATIVE PRIVATE-REPOSITORY ALLOWLIST 2026-08-01
+
+# TCBB V9 corrected checkpoints retained for archival reproducibility.
+# Added post-freeze; the V9 scientific-freeze authority remains the tag
+# tcbb-v9-scientific-freeze-2026-08-31 at commit a959efa517ff11a59b8f13e80ff880242a9441b2.
+!/results/best_models/flank400_focal_epoch12_best.pt
+!/results/best_models/flank400_seed23_focal_epoch13_best.pt

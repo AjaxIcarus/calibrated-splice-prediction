@@ -1,3 +1,18 @@
+> **HISTORICAL IMPLEMENTATION RECORD — NOT CURRENT QUANTITATIVE AUTHORITY**
+>
+> This document records the calibration-v2 patch as it existed during the
+> July 2026 development workflow. Commands and paths below intentionally
+> preserve historical checkpoint names such as seed-11/epoch-11.
+>
+> Do not reinterpret those historical commands as the current checkpoint
+> selection. Current corrected quantitative authority is seed 11/epoch 12
+> and seed 23/epoch 13, as documented in the root `README.md`,
+> `CURRENT_SUBMISSION_AUTHORITY.md`, and
+> `reproducibility/tcbb_v9/README.md`.
+>
+> The historical commands below are preserved rather than rewritten so the
+> development record remains auditable.
+
 # Calibration pipeline v2 patch
 
 Created: 2026-07-28

@@ -1,3 +1,19 @@
+> **ARCHIVED / SUPERSEDED RESEARCH DRAFT — NOT CURRENT TCBB SUBMISSION AUTHORITY**
+>
+> This file is retained as historical project-development material.
+> Statements below using terms such as `current`, `final`, `primary`,
+> `replication`, or older checkpoint identities describe the project state
+> at the time this file was created; they do not define the current TCBB
+> submission or corrected quantitative authority.
+>
+> **Current quantitative authority is seed 11/epoch 12 and seed 23/epoch 13.**
+> See the repository root `README.md`,
+> `CURRENT_SUBMISSION_AUTHORITY.md`, and
+> `reproducibility/tcbb_v9/README.md`.
+>
+> The historical content below is intentionally preserved rather than
+> rewritten so that project evolution remains auditable.
+
 ## Introduction
 
 RNA splicing is a central mechanism by which eukaryotic cells generate transcript diversity from genomic sequence. Alternative splicing affects most multi-exon human genes and is regulated by combinations of cis-regulatory motifs, transcript structure, splice-site strength, and cellular context. Early computational work on the “splicing code” showed that combinations of RNA features could predict tissue-dependent splicing patterns, establishing splicing prediction as a problem of learning regulatory sequence logic rather than detecting splice motifs alone [Barash et al., 2010].

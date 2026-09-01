@@ -5,6 +5,20 @@ abstract: |
   Deep learning models for splice-site prediction are typically evaluated by detection performance, but their output scores are often interpreted as calibrated probabilities. This distinction is important in per-nucleotide splice-site prediction, where acceptor and donor sites are extremely rare relative to non-splice genomic positions. We evaluate probability calibration for a flank-80 OpenSpliceAI-style model trained on human GRCh38/MANE annotations using focal loss. Using true pre-softmax logits, we compare uncalibrated predictions, global temperature scaling, unweighted vector temperature scaling, and genome-prior weighted vector temperature scaling. Genome-weighted true-logit vector scaling reduced weighted multiclass expected calibration error from 0.005610 to 0.000044 and weighted negative log-likelihood from 0.006240 to 0.000818, while preserving strong splice-site detection performance with acceptor and donor AUPRC near 0.991 and 0.995. Bootstrap confidence intervals, reliability diagrams, and prior-sensitivity analysis confirmed that calibration depends strongly on the assumed class prior. These results show that calibrated probability estimation and splice-site detection are separate objectives under extreme class imbalance, and that splice-site probabilities should be interpreted only relative to an explicit evaluation prior.
 ---
 
+> **ARCHIVED / SUPERSEDED RESEARCH DRAFT — NOT CURRENT TCBB SUBMISSION AUTHORITY**
+>
+> This file is preserved unchanged below for development traceability.
+> It may contain historical flank-80 results, earlier flank-400 checkpoints,
+> earlier population definitions, or manuscript wording that was superseded
+> during reproducibility closure and TCBB revision.
+>
+> **Do not use this file as current quantitative or submission authority.**
+> Current repository quantitative authority is seed 11/epoch 12 and
+> seed 23/epoch 13. See the root `README.md`,
+> `CURRENT_SUBMISSION_AUTHORITY.md`, and
+> `reproducibility/tcbb_v9/README.md`.
+
+
 # Introduction
 
 RNA splicing is a central mechanism by which eukaryotic cells generate transcript diversity from genomic sequence. Alternative splicing affects most multi-exon human genes and is regulated by combinations of cis-regulatory motifs, transcript structure, splice-site strength, and cellular context. Early computational work on the “splicing code” showed that combinations of RNA features could predict tissue-dependent splicing patterns, establishing splicing prediction as a problem of learning regulatory sequence logic rather than detecting splice motifs alone [@barash2010splicingcode].

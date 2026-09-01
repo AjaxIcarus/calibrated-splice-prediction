@@ -1,5 +1,19 @@
 # Prior-aware calibration of OpenSpliceAI-style splice-site prediction
 
+
+## Current TCBB submission-package authority
+
+The frozen IEEE TCBB V10.1 submission package is identified in
+[`CURRENT_SUBMISSION_AUTHORITY.md`](CURRENT_SUBMISSION_AUTHORITY.md).
+
+Files under `paper_draft/` are preserved historical development records and
+must not be interpreted as the current portal manuscript or supplement merely
+because an old filename contains terms such as `current`, `final`, or `v10`.
+
+The repository's current corrected quantitative authority remains the
+seed-11/epoch-12 and seed-23/epoch-13 checkpoints documented below.
+
+
 Research repository for **Prior-aware calibration of OpenSpliceAI-style splice-site prediction under genome-level class imbalance**.
 
 This project studies probability calibration for position-level splice-site prediction under severe class imbalance (non-splice, acceptor, donor), while treating detection/ranking and calibration as distinct questions.

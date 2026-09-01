@@ -1,3 +1,16 @@
+> **ARCHIVED / SUPERSEDED RESEARCH DRAFT — NOT CURRENT TCBB SUBMISSION AUTHORITY**
+>
+> This file is preserved unchanged below for development traceability.
+> It may contain historical flank-80 results, earlier flank-400 checkpoints,
+> earlier population definitions, or manuscript wording that was superseded
+> during reproducibility closure and TCBB revision.
+>
+> **Do not use this file as current quantitative or submission authority.**
+> Current repository quantitative authority is seed 11/epoch 12 and
+> seed 23/epoch 13. See the root `README.md`,
+> `CURRENT_SUBMISSION_AUTHORITY.md`, and
+> `reproducibility/tcbb_v9/README.md`.
+
 # Prior-dependent calibration for OpenSpliceAI-style splice-site prediction under extreme class imbalance
 
 ## Abstract

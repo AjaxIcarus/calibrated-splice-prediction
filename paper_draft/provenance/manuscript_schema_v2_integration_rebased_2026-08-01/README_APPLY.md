@@ -1,3 +1,19 @@
+> **ARCHIVED / SUPERSEDED RESEARCH DRAFT — NOT CURRENT TCBB SUBMISSION AUTHORITY**
+>
+> This file is retained as historical project-development material.
+> Statements below using terms such as `current`, `final`, `primary`,
+> `replication`, or older checkpoint identities describe the project state
+> at the time this file was created; they do not define the current TCBB
+> submission or corrected quantitative authority.
+>
+> **Current quantitative authority is seed 11/epoch 12 and seed 23/epoch 13.**
+> See the repository root `README.md`,
+> `CURRENT_SUBMISSION_AUTHORITY.md`, and
+> `reproducibility/tcbb_v9/README.md`.
+>
+> The historical content below is intentionally preserved rather than
+> rewritten so that project evolution remains auditable.
+
 # Flank-400 schema-v2 manuscript integration (rebased)
 
 This replacement package promotes the accepted valid-only, matched cross-seed results into the exact current manuscript and figure/table plan uploaded on August 1, while preserving both current files as backups. It replaces the earlier package that correctly stopped on an input-checksum mismatch.

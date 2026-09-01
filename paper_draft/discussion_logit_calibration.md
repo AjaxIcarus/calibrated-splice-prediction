@@ -1,3 +1,19 @@
+> **ARCHIVED / SUPERSEDED RESEARCH DRAFT — NOT CURRENT TCBB SUBMISSION AUTHORITY**
+>
+> This file is retained as historical project-development material.
+> Statements below using terms such as `current`, `final`, `primary`,
+> `replication`, or older checkpoint identities describe the project state
+> at the time this file was created; they do not define the current TCBB
+> submission or corrected quantitative authority.
+>
+> **Current quantitative authority is seed 11/epoch 12 and seed 23/epoch 13.**
+> See the repository root `README.md`,
+> `CURRENT_SUBMISSION_AUTHORITY.md`, and
+> `reproducibility/tcbb_v9/README.md`.
+>
+> The historical content below is intentionally preserved rather than
+> rewritten so that project evolution remains auditable.
+
 # Discussion: Calibration and detection are separate objectives in splice-site prediction
 
 Deep learning models for splice-site prediction are usually evaluated as detection systems: do true acceptor and donor sites receive higher scores than non-splice positions? In this work, we asked a related but distinct question: when a model assigns a probability to a splice-site prediction, should that probability be interpreted as calibrated uncertainty?

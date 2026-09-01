@@ -1,16 +1,26 @@
-# Paper Draft README
+# Paper Draft Archive README
+
+> **ARCHIVE STATUS — NOT CURRENT TCBB SUBMISSION AUTHORITY**
+>
+> This entire `paper_draft/` directory is retained for development history.
+> Historical filenames such as `current`, `final`, `v10`, or `schema_v2`
+> do **not** indicate current submission authority. The current corrected
+> quantitative checkpoints are seed 11/epoch 12 and seed 23/epoch 13.
+> See the repository root `README.md`, `CURRENT_SUBMISSION_AUTHORITY.md`,
+> and `reproducibility/tcbb_v9/README.md`.
+
 
 ## Project
 
 **Prior-dependent calibration for OpenSpliceAI-style splice-site prediction under extreme class imbalance**
 
-This folder contains the manuscript draft, supplementary materials, bibliography, and planning notes for the true-logit calibration analysis of the flank-80 focal-loss OpenSpliceAI-style splice-site predictor.
+This directory is a historical development archive containing manuscript drafts, supplementary-material drafts, bibliography work, figures, and planning notes from multiple stages of the project. It is preserved for traceability and is not the current TCBB submission authority.
 
 ---
 
 ## Main manuscript draft
 
-Current main draft:
+Historical draft formerly treated as current at this development stage:
 
 - `paper_draft/full_draft_v10.md`
 
@@ -28,7 +38,7 @@ Important section drafts:
 
 ## Supplementary materials
 
-Current supplementary skeleton:
+Historical supplementary skeleton from this development stage:
 
 - `paper_draft/supplementary_materials_v1.md`
 
@@ -113,7 +123,7 @@ Prior-sensitivity figures:
 
 ---
 
-## Final analysis scripts
+## Historical analysis scripts for this development stage
 
 True-logit calibration pipeline:
 
@@ -127,7 +137,7 @@ True-logit calibration pipeline:
 
 ---
 
-## Main empirical claim
+## Historical flank-80 empirical claim — superseded as current quantitative evidence
 
 In extremely imbalanced per-nucleotide splice-site prediction, probability calibration and splice-site detection are separate objectives.
 
@@ -137,7 +147,7 @@ Genome-prior weighted true-logit vector temperature scaling reduced weighted mul
 
 ---
 
-## Current next writing tasks
+## Historical next-writing tasks
 
 1. Convert the Markdown manuscript into a cleaner paper format.
 2. Decide whether the target is workshop-style short paper, full paper, or technical report.
